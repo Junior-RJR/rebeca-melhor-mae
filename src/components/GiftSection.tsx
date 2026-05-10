@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const GiftSection = () => {
   const [phase, setPhase] = useState('loading'); // loading -> ready -> reveal
@@ -20,6 +20,11 @@ const GiftSection = () => {
     }
   }, [phase]);
 
+  const handleRedeem = () => {
+    const message = encodeURIComponent("Oi meu amor! Acabei de ver meu presente de Dia das Mães! Eu sou uma mãe perfeita e amei a surpresa! ❤️ Já quero minhas roupas novas!");
+    window.open(`https://api.whatsapp.com/send?phone=5511946252220&text=${message}`, '_blank');
+  };
+
   if (phase === 'loading') {
     return (
       <div className="suspense-container">
@@ -33,19 +38,28 @@ const GiftSection = () => {
   if (phase === 'ready') {
     return (
       <div className="suspense-container">
-        <h2>Nível Máximo Detectado! 🏆</h2>
-        <p>Você é incrível! Toque no presente abaixo:</p>
-        <div className="box-shake" onClick={() => setPhase('reveal')}>🎁</div>
+        <h2 style={{fontFamily: 'Dancing Script'}}>Análise Concluída! 🏆</h2>
+        <p>Você é uma mãe perfeita! Toque no presente para abrir:</p>
+        <div className="gift-box-container" onClick={() => setPhase('reveal')}>
+            <div className="gift-box-visual">🎁</div>
+            <p className="tap-text">CLIQUE PARA ABRIR</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="gift-card">
-      <p>VOCÊ GANHOU</p>
-      <h2>R$ 350,00</h2>
-      <p>Para gastar com roupas novas! 👗</p>
-      <p style={{marginTop: '20px', fontSize: '0.8rem'}}>Te amamos demais!</p>
+    <div className="gift-card reveal-animation">
+      <p style={{ letterSpacing: '2px', fontWeight: 'bold' }}>VOCÊ GANHOU UM</p>
+      <h2 className="gift-title">VALE-ROUPAS</h2>
+      <div className="gift-value">R$ 350,00</div>
+      <p className="gift-description">
+        Para você renovar seu guarda-roupa e ficar ainda mais linda! 👗✨
+      </p>
+      <button className="btn-redeem" onClick={handleRedeem}>
+        Resgatar Presente no WhatsApp 📱
+      </button>
+      <p style={{marginTop: '20px', fontSize: '0.8rem', opacity: 0.9}}>Te amamos mil milhões!</p>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const MessageFlow = ({ onComplete }: { onComplete: (gift: boolean) => void }) => {
   const [step, setStep] = useState(0);
