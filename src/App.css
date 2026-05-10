@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #d4a373; /* Dourado suave */
+  --secondary: #faedcd; /* Creme */
+  --accent: #e5989b; /* Rose Gold */
+  --text-dark: #2d2d2d;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fcf8f4;
+  color: var(--text-dark);
+}
+
+.App {
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--white);
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* Header */
+.header {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #fff, #fcf8f4);
+}
+
+.header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.carousel img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Timer */
+.timer-container {
+  padding: 30px 20px;
+}
+
+.timer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.timer-item {
+  background: var(--secondary);
+  padding: 15px 5px;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 163, 115, 0.3);
+}
+
+.timer-item span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.timer-item label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Seção Sobre Nós */
+.about-section {
+  padding: 40px 25px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-section p {
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* Mensagens (O Fluxo) */
+.flow-container {
+  padding: 20px;
+  background: var(--white);
+  min-height: 100vh;
+}
+
+.message-card {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.message-card h2 {
+  font-family: 'Dancing Script', cursive;
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+.message-text {
+  text-align: left;
+  line-height: 1.8;
+  white-space: pre-line;
+  color: #333;
+  background: #fff9f9;
+  padding: 25px;
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  font-size: 1.05rem;
+}
+
+/* Botões */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(229, 152, 155, 0.4);
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #d68184;
+}
+
+/* Presente Final */
+.gift-card {
+  background: linear-gradient(135deg, #d4a373, #e5989b);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.gift-value {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
