@@ -60,7 +60,11 @@ const GiftSection = () => {
         Resgatar Presente no WhatsApp 📱
       </button>
       <p style={{marginTop: '20px', fontSize: '0.8rem', opacity: 0.9}}>Te amamos mil milhões!</p>
+      <p className="p-sobre-nos">
+          eu amo o papai, mas voce sempre será a minha pessoa favorita.
+        </p>
     </div>
+    
   );
 };
 

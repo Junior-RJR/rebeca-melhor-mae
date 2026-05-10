@@ -13,7 +13,7 @@ const Carousel = () => {
   const [current, setCurrent] = useState(0);
 
   const next = () => setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prev = () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  // const prev = () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 
   // Muda a foto sozinho a cada 5 segundos
   useEffect(() => {
