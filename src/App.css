@@ -120,6 +120,10 @@ body {
   font-size: 2rem;
 }
 
+.sobre-nos {
+  color: black
+}
+
 .message-text {
   text-align: left;
   line-height: 1.8;

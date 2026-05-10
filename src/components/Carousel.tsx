@@ -17,17 +17,17 @@ const Carousel = () => {
 
   // Muda a foto sozinho a cada 5 segundos
   useEffect(() => {
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(next, 2000);
     return () => clearInterval(timer);
   }, [current]);
 
   return (
     <div className="carousel">
-      <button onClick={prev} className="nav-btn left">‹</button>
+      {/* <button onClick={prev} className="nav-btn left">‹</button> */}
       <div className="carousel-track">
         <img src={images[current]} alt="Nossa história" />
       </div>
-      <button onClick={next} className="nav-btn right">›</button>
+      {/* <button onClick={next} className="nav-btn right">›</button> */}
       <div className="dots">
         {images.map((_, i) => (
           <span key={i} className={`dot ${i === current ? 'active' : ''}`} />

@@ -21,7 +21,7 @@ const GiftSection = () => {
   }, [phase]);
 
   const handleRedeem = () => {
-    const message = encodeURIComponent("Oi meu amor! Acabei de ver meu presente de Dia das Mães! Eu sou uma mãe perfeita e amei a surpresa! ❤️ Já quero minhas roupas novas!");
+    const message = encodeURIComponent("Oi meu amor! Acabei de ver meu presente de Dia das Mães! Eu como eu sou uma mãe perfeita e maravilhosa eu consegui desbloquear o presente e quero resgatar! ❤️ Já quero minhas roupas novas!");
     window.open(`https://api.whatsapp.com/send?phone=5511946252220&text=${message}`, '_blank');
   };
 
@@ -38,7 +38,7 @@ const GiftSection = () => {
   if (phase === 'ready') {
     return (
       <div className="suspense-container">
-        <h2 style={{fontFamily: 'Dancing Script'}}>Análise Concluída! 🏆</h2>
+        <h2 style={{fontFamily: 'Dancing Script', color: 'black'}}>Análise Concluída! 🏆</h2>
         <p>Você é uma mãe perfeita! Toque no presente para abrir:</p>
         <div className="gift-box-container" onClick={() => setPhase('reveal')}>
             <div className="gift-box-visual">🎁</div>
